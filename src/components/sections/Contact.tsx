@@ -7,8 +7,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "info@vanguarddigitalagency.com",
-    link: "mailto:info@vanguarddigitalagency.com",
+    value: "hello@vanguarddigitalagency.com",
+    link: "mailto:hello@vanguarddigitalagency.com",
   },
   {
     icon: Phone,
