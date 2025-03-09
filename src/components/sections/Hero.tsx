@@ -105,7 +105,7 @@ export default function Hero() {
 
       {/* Main Content */}
       <div className="container relative max-w-[1400px] mx-auto px-4 pt-20 md:pt-20">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-12 items-start md:items-center min-h-[calc(100vh-8rem)]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-12 pt-20 items-start md:items-center min-h-[calc(100vh-8rem)]">
           {/* Left Column - Main Content */}
           <div className="col-span-1 md:col-span-5">
             <div className="space-y-6">
@@ -144,7 +144,7 @@ export default function Hero() {
             <div className="space-y-8 md:space-y-12">
               {/* Large decorative text */}
               <div className="relative">
-                <span className="text-8xl md:text-[12rem] leading-none font-light text-neutral-800 select-none">
+                <span className="text-8xl sm:text-2xl md:text-[12rem] leading-none font-light text-neutral-800 select-none">
                   2024
                 </span>
                 <div className="absolute top-1/2 -translate-y-1/2 left-24 md:left-48">

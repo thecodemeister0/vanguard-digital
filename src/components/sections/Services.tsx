@@ -17,6 +17,19 @@ const services = [
   },
   {
     number: "02",
+    title: "Mobile Apps",
+    description:
+      "Building mobile applications for iOS and Android using React Native.",
+    features: [
+      "iOS Development",
+      "Android Development",
+      "React Native",
+      "Automated Deployment",
+    ],
+    tech: "React Native • Expo • Supabase",
+  },
+  {
+    number: "03",
     title: "UI/UX Design",
     description:
       "Creating intuitive, engaging user experiences that elevate your brand.",
@@ -31,7 +44,7 @@ const services = [
     tech: "Figma • Adobe CC • Framer",
   },
   {
-    number: "03",
+    number: "04",
     title: "Digital Strategy",
     description:
       "Developing comprehensive digital solutions to achieve your business goals.",
@@ -80,33 +93,28 @@ export default function Services() {
         </div>
 
         {/* Services List */}
-        <div className="space-y-20 md:space-y-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-16">
           {services.map((service, i) => (
             <div key={i} className="group">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
-                {/* Service Header */}
-                <div className="md:col-span-5">
-                  <div className="sticky top-32">
-                    <div className="flex items-center gap-4 mb-6">
-                      <span className="text-sm tracking-[0.2em] text-neutral-500">
-                        {service.number}
-                      </span>
-                      <div className="h-px flex-1 bg-neutral-800" />
-                    </div>
-                    <h3 className="text-3xl md:text-4xl font-light mb-6 group-hover:text-neutral-400 transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-neutral-400 text-base md:text-lg mb-6">
-                      {service.description}
-                    </p>
-                    <span className="text-sm text-neutral-500 font-mono">
-                      {service.tech}
-                    </span>
-                  </div>
+              <div className="flex items-start gap-6 mb-6">
+                <span className="text-2xl md:text-3xl font-light text-neutral-500">
+                  {service.number}
+                </span>
+                <div>
+                  <h3 className="text-3xl md:text-4xl font-light mb-6 group-hover:text-neutral-400 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-neutral-400 text-base md:text-lg mb-6">
+                    {service.description}
+                  </p>
+                  <span className="text-sm text-neutral-500 font-mono">
+                    {service.tech}
+                  </span>
                 </div>
-
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-12 gap-8 md:gap-12">
                 {/* Service Features */}
-                <div className="md:col-span-7">
+                {/* <div className="md:col-span-7">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {service.features.map((feature, index) => (
                       <div
@@ -117,7 +125,7 @@ export default function Services() {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

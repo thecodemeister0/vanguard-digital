@@ -85,7 +85,7 @@ export default function Approach() {
         {/* Steps Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-16">
           {steps.map((step, i) => (
-            <div key={i} className="group relative">
+            <div key={i} className="group">
               {/* Step Header */}
               <div className="flex items-start gap-6 mb-6">
                 <span className="text-2xl md:text-3xl font-light text-neutral-500">
@@ -102,7 +102,7 @@ export default function Approach() {
               </div>
 
               {/* Step Details */}
-              <div className="ml-14 pl-6 border-l border-neutral-800">
+              {/* <div className="ml-14 pl-6 border-l border-neutral-800">
                 <ul className="space-y-3">
                   {step.details.map((detail, index) => (
                     <li key={index} className="text-sm text-neutral-500">
@@ -110,7 +110,7 @@ export default function Approach() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
