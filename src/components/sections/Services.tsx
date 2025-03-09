@@ -95,7 +95,10 @@ export default function Services() {
         {/* Services List */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-16">
           {services.map((service, i) => (
-            <div key={i} className="group">
+            <div
+              key={i}
+              className="group relative p-8 md:p-12 border border-neutral-700 rounded-2xl hover:border-neutral-600 transition-all duration-300"
+            >
               <div className="flex items-start gap-6 mb-6">
                 <span className="text-2xl md:text-3xl font-light text-neutral-500">
                   {service.number}

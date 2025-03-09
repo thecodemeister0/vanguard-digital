@@ -59,24 +59,20 @@ export default function Reasons() {
 
       <div className="container relative max-w-[1400px] mx-auto px-4">
         {/* Section Header */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16 md:mb-24">
-          <div>
-            <span className="text-sm tracking-[0.2em] text-neutral-500 block mb-6">
-              04 / 04
-            </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light">
-              Why Choose
-              <br />
-              <span className="text-neutral-400">Our Expertise</span>
-            </h2>
-          </div>
-          <div className="flex items-end">
-            <p className="text-neutral-400 text-base md:text-lg max-w-xl">
-              We combine technical excellence with creative innovation to
-              deliver exceptional digital solutions that set you apart from the
-              competition.
-            </p>
-          </div>
+        <div className="max-w-2xl mb-16 md:mb-24">
+          <span className="text-sm tracking-[0.2em] text-neutral-500 block mb-6">
+            04 / 04
+          </span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-8">
+            Why Choose
+            <br />
+            <span className="text-neutral-400">Our Expertise</span>
+          </h2>
+          <p className="text-neutral-400 text-base md:text-lg max-w-xl">
+            We combine technical excellence with creative innovation to deliver
+            exceptional digital solutions that set you apart from the
+            competition.
+          </p>
         </div>
 
         {/* Reasons Grid */}
@@ -84,19 +80,19 @@ export default function Reasons() {
           {reasons.map((reason, i) => (
             <div
               key={i}
-              className="group relative p-8 md:p-12 border border-neutral-800 rounded-2xl hover:border-neutral-700 transition-all duration-300"
+              className="group relative p-8 md:p-12 border border-neutral-700 rounded-2xl hover:border-neutral-600 transition-all duration-300"
             >
               {/* Number */}
               <div className="flex items-center gap-4 mb-8">
                 <span className="text-sm tracking-[0.2em] text-neutral-500">
                   {reason.number}
                 </span>
-                <div className="h-px flex-1 bg-neutral-800 group-hover:bg-neutral-700 transition-colors" />
+                <div className="h-px flex-1 bg-neutral-700 group-hover:bg-neutral-600 transition-colors" />
               </div>
 
               {/* Content */}
               <div className="space-y-4 mb-8">
-                <h3 className="text-2xl md:text-3xl font-light group-hover:text-neutral-400 transition-colors">
+                <h3 className="text-2xl md:text-3xl font-light group-hover:text-neutral-300 transition-colors">
                   {reason.title}
                 </h3>
                 <p className="text-neutral-400">{reason.description}</p>

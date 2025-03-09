@@ -73,7 +73,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
           {/* Contact Form */}
-          <div className="md:col-span-7">
+          <div className="md:col-span-7 relative p-8 md:p-12 border border-neutral-700 rounded-2xl hover:border-neutral-600 transition-all duration-300">
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
@@ -87,7 +87,7 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    className="w-full bg-transparent border border-neutral-800 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-neutral-600"
+                    className="w-full bg-transparent border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-neutral-600"
                     placeholder="John Doe"
                   />
                 </div>
@@ -102,7 +102,7 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full bg-transparent border border-neutral-800 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-neutral-600"
+                    className="w-full bg-transparent border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-neutral-600"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -119,7 +119,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, company: e.target.value })
                   }
-                  className="w-full bg-transparent border border-neutral-800 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-neutral-600"
+                  className="w-full bg-transparent border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-neutral-600"
                   placeholder="Your company name"
                 />
               </div>
@@ -135,14 +135,14 @@ export default function Contact() {
                     setFormData({ ...formData, message: e.target.value })
                   }
                   rows={6}
-                  className="w-full bg-transparent border border-neutral-800 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-neutral-600 resize-none"
+                  className="w-full bg-transparent border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-neutral-600 resize-none"
                   placeholder="Tell us about your project..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 text-sm group border border-neutral-800 rounded-full px-6 py-3 hover:border-neutral-600 transition-colors"
+                className="inline-flex items-center gap-2 text-sm group border border-neutral-700 rounded-full px-6 py-3 hover:border-neutral-600 transition-colors"
               >
                 <span className="text-neutral-400 group-hover:text-white transition-colors">
                   Send Message

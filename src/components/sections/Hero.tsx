@@ -159,7 +159,11 @@ export default function Hero() {
 
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 border-t border-neutral-800 pt-8">
-                <div>
+                <div
+                  className={
+                    "group relative p-8 md:p-10 border border-neutral-700 rounded-2xl hover:border-neutral-600 transition-all duration-300"
+                  }
+                >
                   <span className="block text-2xl md:text-3xl font-light mb-2">
                     30+
                   </span>
@@ -167,7 +171,11 @@ export default function Hero() {
                     Projects Delivered
                   </span>
                 </div>
-                <div>
+                <div
+                  className={
+                    "group relative p-8 md:p-10 border border-neutral-700 rounded-2xl hover:border-neutral-600 transition-all duration-300"
+                  }
+                >
                   <span className="block text-2xl md:text-3xl font-light mb-2">
                     8 years+
                   </span>
@@ -175,7 +183,11 @@ export default function Hero() {
                     Industry Experience
                   </span>
                 </div>
-                <div>
+                <div
+                  className={
+                    "group relative p-8 md:p-10 border border-neutral-700 rounded-2xl hover:border-neutral-600 transition-all duration-300"
+                  }
+                >
                   <span className="block text-2xl md:text-3xl font-light mb-2">
                     95%
                   </span>
