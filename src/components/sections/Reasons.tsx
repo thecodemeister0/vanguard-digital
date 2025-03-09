@@ -32,12 +32,12 @@ const reasons = [
   },
   {
     number: "04",
-    title: "Ongoing Support",
+    title: "Strategic Marketing",
     description:
-      "We're committed to your long-term success with continuous maintenance and optimization.",
+      "We help you reach your audience through search engines, social media, and email marketing.",
     stats: {
-      value: "24/7",
-      label: "Support Available",
+      value: "5x",
+      label: "Leads Generated",
     },
   },
 ];
