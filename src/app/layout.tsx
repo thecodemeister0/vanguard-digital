@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Background from "@/components/layout/Background";
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Background />
         <main className="min-h-screen">{children}</main>
+        <Analytics />
       </body>
     </html>
   );
