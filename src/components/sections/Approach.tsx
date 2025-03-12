@@ -56,7 +56,7 @@ export default function Approach() {
       {/* Grid Background */}
       <div className="absolute inset-0 opacity-20">
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 parallax-slow"
           style={{
             backgroundImage:
               "linear-gradient(to right, #333 1px, transparent 1px), linear-gradient(to bottom, #333 1px, transparent 1px)",
@@ -67,53 +67,56 @@ export default function Approach() {
 
       <div className="container relative max-w-[1400px] mx-auto px-4">
         {/* Section Header */}
-        <div className="max-w-2xl mb-16 md:mb-24">
+        <div
+          className="max-w-2xl mb-16 md:mb-24"
+          data-animation="animate-fade-in"
+        >
           <span className="text-sm tracking-[0.2em] text-neutral-500 block mb-6">
             02 / 04
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-8">
             Our Approach to
             <br />
-            <span className="text-neutral-400">Digital Excellence</span>
+            <span className="text-blue-400">Digital Excellence</span>
           </h2>
           <p className="text-neutral-400 text-base md:text-lg">
             A systematic methodology that transforms complex challenges into
-            elegant solutions.
+            elegant digital solutions with predictable, successful outcomes.
           </p>
         </div>
 
-        {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-16">
-          {steps.map((step, i) => (
+        {/* Approach Steps */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
+          data-stagger
+        >
+          {steps.map((step, index) => (
             <div
-              key={i}
-              className="group relative p-8 md:p-12 border border-neutral-700 rounded-2xl hover:border-neutral-600 transition-all duration-300"
+              key={index}
+              className="p-6 border border-neutral-800 rounded-lg"
+              data-animation="animate-slide-up"
             >
-              {/* Step Header */}
-              <div className="flex items-start gap-6 mb-6">
-                <span className="text-2xl md:text-3xl font-light text-neutral-500">
+              <div className="flex items-center gap-4 mb-6">
+                <span className="text-3xl text-blue-400 font-light">
                   {step.number}
                 </span>
-                <div>
-                  <h3 className="text-2xl md:text-3xl font-light mb-4 group-hover:text-neutral-400 transition-colors">
-                    {step.title}
-                  </h3>
-                  <p className="text-neutral-400 text-base md:text-lg">
-                    {step.description}
-                  </p>
-                </div>
+                <div className="h-px bg-neutral-800 flex-grow"></div>
               </div>
-
-              {/* Step Details */}
-              {/* <div className="ml-14 pl-6 border-l border-neutral-800">
-                <ul className="space-y-3">
-                  {step.details.map((detail, index) => (
-                    <li key={index} className="text-sm text-neutral-500">
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
-              </div> */}
+              <h3 className="text-xl md:text-2xl font-light mb-3">
+                {step.title}
+              </h3>
+              <p className="text-neutral-400 mb-6">{step.description}</p>
+              <ul className="space-y-2">
+                {step.details.map((detail, i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-2 text-sm text-neutral-300"
+                  >
+                    <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                    {detail}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

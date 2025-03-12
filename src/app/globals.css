@@ -100,23 +100,7 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+  --radius: var(--radius);
 }
 
 @layer base {
@@ -183,4 +167,144 @@
       rgba(252, 231, 243, 0.5) 100%
     );
   }
+}
+
+/* Remove our custom animation keyframes */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animation Utility Classes */
+.animate-fade-in {
+  animation: fade-in 0.8s ease forwards;
+}
+
+.animate-slide-up {
+  animation: fade-up 0.8s ease forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.8s ease forwards;
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.8s ease forwards;
+}
+
+/* Animation Delays */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Parallax Effect Classes */
+.parallax-slow {
+  transition: transform 0.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.parallax-medium {
+  transition: transform 0.07s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.parallax-fast {
+  transition: transform 0.05s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Consistent Section Styling */
+.section-title {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-8;
+}
+
+.section-subtitle {
+  @apply text-neutral-400 text-lg md:text-xl mb-12;
+}
+
+.section-header-container {
+  @apply max-w-[800px] mb-16 md:mb-24;
+}
+
+.section-number {
+  @apply text-sm tracking-[0.2em] text-neutral-500 block mb-6;
+}
+
+.feature-card {
+  @apply border border-neutral-800 rounded-2xl p-8 md:p-10 hover:border-neutral-600 transition-all duration-300;
+}
+
+.feature-card:hover {
+  @apply bg-neutral-800/10;
+  transform: translateY(-5px);
+}
+
+/* Hidden animation items for JS initialization */
+.hidden-animation {
+  opacity: 0;
 }
