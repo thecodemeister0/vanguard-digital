@@ -8,7 +8,7 @@ export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <section className="relative min-h-screen bg-neutral-900 text-white">
+    <section className="relative min-h-screen bg-neutral-900 text-white overflow-x-hidden">
       {/* Grid Background */}
       <div className="absolute inset-0 opacity-10">
         <div
@@ -127,7 +127,7 @@ export default function Hero() {
       <div className="container relative max-w-[1400px] mx-auto px-4 pt-20 md:pt-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-12 pt-20 items-start md:items-center min-h-[calc(100vh-8rem)]">
           {/* Left Column - Main Content */}
-          <div className="col-span-1 md:col-span-5">
+          <div className="col-span-1 md:col-span-5 lg:col-span-5">
             <div className="space-y-6">
               {/* Slide Counter */}
               <div

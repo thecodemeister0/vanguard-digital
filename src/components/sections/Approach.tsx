@@ -52,7 +52,7 @@ const steps = [
 
 export default function Approach() {
   return (
-    <section className="relative py-24 md:py-32 bg-[#1C1C1C] text-white">
+    <section className="relative py-24 md:py-32 bg-[#1C1C1C] text-white overflow-hidden">
       {/* Grid Background */}
       <div className="absolute inset-0 opacity-20">
         <div

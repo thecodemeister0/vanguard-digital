@@ -108,7 +108,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#f8f9fc] text-foreground;
+    @apply bg-[#f8f9fc] text-foreground overflow-x-hidden;
   }
 }
 

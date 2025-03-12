@@ -44,7 +44,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="relative py-20">
+    <section className="relative py-20 overflow-hidden">
       <div className="container">
         <div className="max-w-2xl">
           <span className="text-primary/60 font-mono">02</span>

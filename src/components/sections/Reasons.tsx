@@ -63,12 +63,6 @@ const reasons = [
 export default function Reasons() {
   return (
     <section className="relative py-24 md:py-32 overflow-hidden bg-neutral-900 text-white">
-      {/* Background Elements */}
-      <div className="absolute left-0 right-0 h-full pointer-events-none">
-        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
-      </div>
-
       <div className="container relative max-w-[1400px] mx-auto px-4">
         <div
           className="space-y-4 max-w-2xl mb-16 md:mb-24"
@@ -86,117 +80,80 @@ export default function Reasons() {
           </p>
         </div>
 
-        {/* Featured first reason */}
-        <div className="mb-16" data-animation="animate-fade-in">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 group relative p-8 md:p-12 border border-neutral-800 rounded-2xl hover:border-blue-500/30 transition-all duration-300 hover:bg-neutral-800/20">
+        {/* Featured first reason - Leaner version */}
+        <div className="mb-10 md:mb-14" data-animation="animate-fade-in">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 group relative p-5 md:p-6 lg:p-10 border border-neutral-800 rounded-2xl hover:border-blue-500/30 transition-all duration-300 hover:bg-neutral-800/20">
             <div className="flex flex-col justify-between h-full">
               <div>
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="h-12 w-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-mono">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="h-10 w-10 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-mono text-sm">
                     {reasons[0].id}
                   </div>
-                  <div className="h-px flex-grow bg-neutral-800 group-hover:bg-neutral-700 transition-colors"></div>
+                  <div className="flex-grow flex items-center justify-between">
+                    <div className="h-px flex-grow bg-neutral-800 group-hover:bg-neutral-700 transition-colors"></div>
+                    <span className="ml-4 px-3 py-1 bg-blue-500/10 text-blue-400 text-sm rounded-full hidden sm:block">
+                      OPTIMIZED PERFORMANCE
+                    </span>
+                  </div>
                 </div>
 
-                <div className="flex items-start gap-4 mb-5">
-                  <div className="shrink-0 w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="shrink-0 w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center">
                     {React.createElement(reasons[0].icon, {
                       className: "w-5 h-5 text-blue-400",
                     })}
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-light group-hover:text-neutral-100 transition-colors">
-                    {reasons[0].title}
-                  </h3>
-                </div>
-
-                {/* Mobile Visual Element (Only visible on mobile) */}
-                <div className="lg:hidden mb-8">
-                  <div className="relative rounded-2xl bg-gradient-to-br from-neutral-800 to-neutral-900 p-6 overflow-hidden border border-neutral-800">
-                    {/* Animated Dots */}
-                    <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-blue-400/50 animate-pulse"></div>
-                    <div
-                      className="absolute top-3 right-8 w-2 h-2 rounded-full bg-blue-400/30 animate-pulse"
-                      style={{ animationDelay: "0.5s" }}
-                    ></div>
-                    <div
-                      className="absolute top-3 right-13 w-2 h-2 rounded-full bg-blue-400/20 animate-pulse"
-                      style={{ animationDelay: "1s" }}
-                    ></div>
-
-                    {/* Icon */}
-                    <div className="flex justify-center mb-4">
-                      <div className="w-16 h-16 rounded-xl bg-blue-500/10 flex items-center justify-center">
-                        <Code className="w-8 h-8 text-blue-400" />
-                      </div>
-                    </div>
-
-                    {/* Performance Metrics */}
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                      <div className="bg-neutral-800/50 rounded-lg p-3 text-center">
-                        <div className="text-lg text-blue-400 font-mono mb-1">
-                          {reasons[0].stat1.value}
-                        </div>
-                        <div className="text-xs text-neutral-500">
-                          {reasons[0].stat1.label}
-                        </div>
-                      </div>
-                      <div className="bg-neutral-800/50 rounded-lg p-3 text-center">
-                        <div className="text-lg text-blue-400 font-mono mb-1">
-                          {reasons[0].stat2.value}
-                        </div>
-                        <div className="text-xs text-neutral-500">
-                          {reasons[0].stat2.label}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Description */}
-                    <p className="text-sm text-neutral-400 mb-4">
-                      {reasons[0].description}
-                    </p>
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-light group-hover:text-neutral-100 transition-colors">
+                      {reasons[0].title}
+                    </h3>
+                    <span className="mt-1 px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full inline-block sm:hidden">
+                      OPTIMIZED PERFORMANCE
+                    </span>
                   </div>
                 </div>
 
-                <p className="text-neutral-400 md:text-lg transition-colors group-hover:text-neutral-300 pl-14">
+                {/* More concise description */}
+                <p className="text-neutral-400 text-sm md:text-base transition-colors group-hover:text-neutral-300 pl-14 mb-5">
                   {reasons[0].description}
                 </p>
-              </div>
 
-              <div className="grid grid-cols-2 gap-6 mt-8 pl-14">
-                <div className="space-y-1">
-                  <div className="text-blue-400 font-mono text-xl md:text-2xl">
-                    {reasons[0].stat1.value}
+                {/* Stats - More compact */}
+                <div className="grid grid-cols-2 gap-4 pl-14">
+                  <div className="space-y-1">
+                    <div className="text-blue-400 font-mono text-lg md:text-xl">
+                      {reasons[0].stat1.value}
+                    </div>
+                    <div className="text-neutral-500 text-xs">
+                      {reasons[0].stat1.label}
+                    </div>
                   </div>
-                  <div className="text-neutral-500 text-sm">
-                    {reasons[0].stat1.label}
-                  </div>
-                </div>
-                <div className="space-y-1">
-                  <div className="text-blue-400 font-mono text-xl md:text-2xl">
-                    {reasons[0].stat2.value}
-                  </div>
-                  <div className="text-neutral-500 text-sm">
-                    {reasons[0].stat2.label}
+                  <div className="space-y-1">
+                    <div className="text-blue-400 font-mono text-lg md:text-xl">
+                      {reasons[0].stat2.value}
+                    </div>
+                    <div className="text-neutral-500 text-xs">
+                      {reasons[0].stat2.label}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* Visual Column - Consistent with Values and Process */}
             <div className="relative hidden lg:flex items-center justify-center">
-              <div className="relative w-full max-w-md h-full">
-                <div className="aspect-square rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-950 p-8 flex items-center justify-center overflow-hidden">
-                  {/* Abstract Design Elements */}
+              <div className="relative w-full max-w-xs mx-auto">
+                <div className="aspect-square rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-950 p-6 flex items-center justify-center overflow-hidden">
+                  {/* Card-specific visual elements - Keep consistent with Values */}
                   <div className="absolute inset-0 bg-neutral-900">
                     <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-gradient-to-br from-blue-900/5 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 w-1/2 h-1/2 rounded-tl-full bg-blue-500/5 blur-3xl"></div>
+                    <div className="absolute bottom-0 left-0 w-1/2 h-1/2 rounded-tl-full bg-blue-500/5 blur-xl"></div>
                   </div>
 
-                  {/* Simple lines */}
-                  <div className="absolute inset-0">
+                  {/* Card-specific grid lines */}
+                  <div className="absolute inset-0 pointer-events-none">
                     <div className="absolute top-[20%] left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
-                    <div className="absolute top-[40%] left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-blue-500/10 to-transparent"></div>
                     <div className="absolute top-[60%] left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
-                    <div className="absolute top-[80%] left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-blue-500/10 to-transparent"></div>
                   </div>
 
                   {/* Content */}
@@ -205,33 +162,21 @@ export default function Reasons() {
                       <Code className="w-8 h-8 text-blue-400" />
                     </div>
 
-                    <div className="bg-neutral-800/30 backdrop-blur-sm rounded-full px-6 py-2 border border-neutral-700/30">
-                      <div className="text-sm text-blue-400 font-mono">
-                        OPTIMIZED PERFORMANCE
-                      </div>
-                    </div>
+                    <span className="px-4 py-1.5 bg-blue-500/10 text-blue-400 text-xs rounded-full">
+                      OPTIMIZED PERFORMANCE
+                    </span>
                   </div>
 
-                  {/* Geometric elements */}
-                  <div className="absolute top-[15%] right-[15%] w-16 h-16">
-                    <div className="absolute inset-0 border border-blue-500/20 rounded-md transform rotate-45"></div>
-                    <div className="absolute inset-3 border border-blue-500/10 rounded-md transform rotate-45"></div>
+                  {/* Card-specific decorative elements */}
+                  <div className="absolute top-[15%] right-[15%] w-10 h-10 pointer-events-none">
+                    <div className="absolute inset-0 border border-blue-500/10 rounded-md transform rotate-45"></div>
+                    <div className="absolute inset-2 border border-blue-500/5 rounded-md transform rotate-45"></div>
                   </div>
 
-                  <div className="absolute bottom-[15%] left-[15%] w-16 h-16">
+                  <div className="absolute bottom-[15%] left-[15%] w-10 h-10 pointer-events-none">
                     <div className="absolute inset-0 border border-blue-500/10 rounded-full"></div>
-                    <div className="absolute inset-3 border border-blue-500/20 rounded-full"></div>
+                    <div className="absolute inset-2 border border-blue-500/5 rounded-full"></div>
                   </div>
-
-                  {/* Subtle ping animations */}
-                  <div
-                    className="absolute top-[30%] right-[30%] w-1 h-1 rounded-full bg-blue-400 animate-ping opacity-70"
-                    style={{ animationDuration: "3s" }}
-                  ></div>
-                  <div
-                    className="absolute bottom-[40%] left-[20%] w-1 h-1 rounded-full bg-blue-400 animate-ping opacity-70"
-                    style={{ animationDuration: "4s" }}
-                  ></div>
                 </div>
 
                 {/* Border accent */}
@@ -243,47 +188,42 @@ export default function Reasons() {
           </div>
         </div>
 
-        {/* Remaining reasons in grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Remaining reasons in grid - More compact */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reasons.slice(1).map((reason, i) => (
             <div
               key={i}
-              className="group relative p-8 border border-neutral-800 rounded-2xl hover:border-blue-500/30 transition-all duration-300 hover:bg-neutral-800/20"
+              className="group relative p-6 border border-neutral-800 rounded-2xl hover:border-blue-500/30 transition-all duration-300 hover:bg-neutral-800/20"
               data-animation="animate-slide-up"
               data-delay={100 * (i + 1)}
             >
-              {/* Visual indicator */}
-              <div className="absolute top-4 right-4 flex space-x-1">
-                <div className="w-2 h-2 rounded-full bg-blue-500/30"></div>
-                <div className="w-2 h-2 rounded-full bg-blue-500/20"></div>
-                <div className="w-2 h-2 rounded-full bg-blue-500/10"></div>
-              </div>
+              {/* Remove visual indicator dots */}
 
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="h-10 w-10 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-mono text-sm">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="h-9 w-9 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-mono text-sm">
                   {reason.id}
                 </div>
                 <div className="h-px flex-grow bg-neutral-800 group-hover:bg-neutral-700 transition-colors"></div>
               </div>
 
-              <div className="flex items-start gap-4 mb-5">
-                <div className="shrink-0 w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
+              <div className="flex items-start gap-3 mb-3">
+                <div className="shrink-0 w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center">
                   {React.createElement(reason.icon, {
-                    className: "w-5 h-5 text-blue-400",
+                    className: "w-4 h-4 text-blue-400",
                   })}
                 </div>
-                <h3 className="text-xl font-light group-hover:text-neutral-100 transition-colors">
+                <h3 className="text-lg font-medium group-hover:text-neutral-100 transition-colors">
                   {reason.title}
                 </h3>
               </div>
 
-              <p className="text-neutral-500 mb-6 pl-14 line-clamp-3">
+              <p className="text-neutral-500 mb-4 pl-11 text-xs md:text-sm line-clamp-2">
                 {reason.description}
               </p>
 
-              <div className="grid grid-cols-2 gap-3 pl-14">
+              <div className="grid grid-cols-2 gap-3 pl-11">
                 <div>
-                  <div className="text-blue-400 font-mono text-lg mb-1">
+                  <div className="text-blue-400 font-mono text-base mb-0.5">
                     {reason.stat1.value}
                   </div>
                   <div className="text-neutral-500 text-xs">
@@ -291,7 +231,7 @@ export default function Reasons() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-blue-400 font-mono text-lg mb-1">
+                  <div className="text-blue-400 font-mono text-base mb-0.5">
                     {reason.stat2.value}
                   </div>
                   <div className="text-neutral-500 text-xs">
